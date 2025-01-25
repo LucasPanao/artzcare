@@ -1,0 +1,80 @@
+// Cores
+$green-dark: #1b5e20;  // Cor verde escuro, tipo mato/planta
+$green-darker: #164f17; // Tom mais escuro de verde
+$green-light: #388e3c; // Cor verde mais clara
+$white: #ffffff; // Cor branca para o texto
+
+// Container principal
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $green-darker; // Fundo mais escuro
+  }
+  
+  // Estilo do card de login
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: $green-dark;
+    color: $white;
+    padding: 20px;
+    border-radius: 10px;
+  
+    .login-title {
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: $white;
+      text-align: center;
+    }
+  
+    .login-subtitle {
+      font-size: 1rem;
+      font-weight: 300;
+      color: $white;
+      text-align: center;
+    }
+  }
+  
+  // Campos do formulário
+  .form-field {
+    width: 100%;
+    margin-bottom: 20px;
+    color: $white;
+  
+    mat-label {
+      color: black;
+    }
+  
+    mat-error {
+      color: red;
+    }
+  }
+  
+  // Ações do botão de login
+  .login-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    button {
+      background-color: $green-light;
+      color: $white;
+      width: 100%;
+      font-size: 1.2rem;
+      padding: 12px 0;
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      &:disabled {
+        background-color: #4caf50;
+        cursor: not-allowed;
+      }
+    }
+  }
+  

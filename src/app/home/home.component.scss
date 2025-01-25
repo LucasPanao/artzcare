@@ -1,0 +1,149 @@
+// Cores
+$green-dark: #1b5e20;  // Cor verde escuro, tipo mato/planta
+$green-darker: #164f17; // Tom mais escuro de verde
+$green-light: #388e3c; // Cor verde mais clara
+$white: #ffffff; // Cor branca para o texto
+
+// Fontes
+$font-family: 'Roboto', sans-serif;  // Fonte mais profissional e moderna, relacionada à saúde
+
+// Reset de estilos
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Estilos globais
+body {
+  font-family: $font-family;
+  background-color: $green-darker;  // Fundo mais escuro, combinando melhor com o verde escuro
+  color: $white;  // Texto branco para contraste
+}
+
+// Container principal
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-between;
+  background-color: $green-darker;  // Fundo escuro para a tela inteira
+  padding: 20px;
+}
+
+// Cabeçalho
+.header {
+  background-color: $green-dark;  // Fundo mais escuro para o cabeçalho
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: $white;
+  h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+// Conteúdo principal
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  .services {
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 25px;
+        color: $white;
+        font-weight: 300;
+        text-align: center; 
+    }
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      .service-card {
+        background-color: #1c5335; // Cor de fundo dos cards mais escura
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        text-align: center;
+        color: $white;
+        h3 {
+          font-size: 1.25rem;
+          margin-bottom: 10px;
+          font-weight: 300;
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  // Botão de consulta médica no estilo de um círculo com ícone
+  .start-consultation {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    
+    .consult-button {
+      background-color: $green-light;  // Verde claro para o botão
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 300;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      color: $white;
+      padding: 20px; 
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .consult-icon {
+        font-size: 2rem;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// Rodapé
+.footer {
+  background-color: $green-dark;  // Fundo escuro para o rodapé
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: $white;
+  p {
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+}
+
+// Responsividade para celular
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header p {
+    font-size: 0.875rem;
+  }
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,36 @@
+<!-- Link para o Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+
+<mat-card class="container">
+  <header class="header">
+    <mat-card-title>ArtzCare</mat-card-title>
+    <p>Atendimento 24h, sempre ao seu lado.</p>
+  </header>
+
+  <main class="main-content">
+    <!-- Botão de consulta médica com ícone -->
+    <div class="start-consultation">
+      <button routerLink="/video-call" mat-raised-button color="accent" class="consult-button">
+        <p>Clique aqui para iniciar sua consulta.</p>
+        <i class="fas fa-stethoscope consult-icon"></i>
+      </button>
+    </div>
+
+    <section class="services">
+      <h2>Serviços</h2>
+      <div class="service-cards">
+        <mat-card class="service-card" *ngFor="let service of services">
+          <mat-card-title>{{ service.title }}</mat-card-title>
+          <mat-card-content>{{ service.description }}</mat-card-content>
+        </mat-card>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ArtzCare. Todos os direitos reservados.</p>
+  </footer>
+</mat-card>
